@@ -1,0 +1,22 @@
+{
+  "name": "hbars-calc",
+  "version": "1.0.0",
+  "description": "A Calculator application using nodejs, express.js, handlebars template engine and bootstrap",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "template-engine",
+    "handlebars"
+  ],
+  "author": "Akhil",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-handlebars": "latest"
+  }
+}
