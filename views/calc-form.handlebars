@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-md-offset-0 panel panel-default">
-        <h1 align="center" class="margin-base-vertical">Web Calculator</h1>
+        <h1 align="center" class="margin-base-vertical">Basic Calculator</h1>
 
         <form class="margin-base-vertical" method="get" action="/result">
 
@@ -36,6 +36,25 @@
         </p>
 
         </form>
+      </div>
+      &nbsp;
+      <div class="col-md-4 panel panel-default">
+        <h1 align="center" class="margin-base-vertical">Expression Calculator</h1>
+        <!-- expressions -->
+        <form class="margin-base-vertical" method="post" action="/exp-result">
+
+          <p class="input-group ">
+            <span class="input-group-addon"><span class="icon-user"></span></span>
+            <input type="text" required class="form-control input-lg" 
+            name="expression" placeholder="Enter an expression" />
+          </p>
+
+          <p class="text-center">
+            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+        </p>
+
+        </form>
+
       </div>
     </div>
   </div>

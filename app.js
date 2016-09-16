@@ -17,7 +17,7 @@ app.engine('handlebars', hbars({}));
 
 app.get('/', routes.calcFormHandler);
 app.get('/result', routes.ResultHandler);
-
+app.post('/exp-result', routes.ExpResultHandler);
 
 
 

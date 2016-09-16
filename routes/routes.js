@@ -1,3 +1,4 @@
+var ngexpr = require("angular-expressions");
 
 exports.calcFormHandler = function(req, res){
 	res.render('calc-form.handlebars', {});
@@ -24,3 +25,20 @@ exports.ResultHandler = function(req, res){
 	res.render('result-page.handlebars', {result: resultString});
 }//ResultHandler
 
+exports.ExpResultHandler = function(req, res){
+	var expr = req.body.expression;
+
+	var resultValue = 0;
+	var resultString = "";
+	console.log("expression=%s", expr);
+	try{
+		var fn = ngexpr.compile(expr);
+		resultValue = fn();
+		resultString = "" + resultValue;
+	}catch(err){
+		resultString = "" + err;
+	}
+	
+	console.log("resultValue=%s resultString=%s", resultValue, resultString);
+	res.render('result-page.handlebars', {result: resultString});
+}//ExpResultHandler
